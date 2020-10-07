@@ -5,14 +5,13 @@
  *      Author: thek1d
  */
 
-// ToDo implement double linked list!
+// ToDo implement double linked list, with generic value type for nodes!
 
 #include "main.h"
 
 int main(int argc, char* argv[])
 {
 	List_t *pList = &((List_t){.size = 0, .pHead = NULL});
-	assert(pList);
 
 	addNewNodeSortedToList(pList, 3);
 	printList(pList);

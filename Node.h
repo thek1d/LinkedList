@@ -20,6 +20,8 @@ typedef struct List
 	size_t   size;
 }List_t;
 
+typedef void (*callback_t)();
+
 /* Function prototypes */
 Node_t* createNode  		  (int val);
 void 	addNewNodeSortedToList(List_t *pList, int data);
@@ -27,6 +29,7 @@ void  	insertFront 		  (List_t *pList, int value);
 void	printList			  (List_t *pList);
 void	insertSorted		  (List_t *pList, Node_t *pNewNode);
 void	deleteList			  (List_t *pList);
+void	iterateOverList		  (List_t *pList, callback_t callback);
 
 
 #endif /* NODE_H_ */

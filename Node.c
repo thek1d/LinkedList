@@ -111,3 +111,14 @@ void deleteList	(List_t *pList)
 
 	pList->pHead = NULL;
 }
+
+void iterateOverList (List_t *pList, callback_t callback)
+{
+	Node_t *pCurrent = pList->pHead;
+
+	while(pCurrent->value != NULL)
+	{
+		pCurrent = pCurrent->pNext;
+		callback();
+	}
+}
